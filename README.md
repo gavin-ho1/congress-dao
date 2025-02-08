@@ -36,7 +36,7 @@ CongressDAO aims to bring the traditional legislative process into the decentral
 The repository is organized as follows:
 
 - `contracts/`: Contains the Solidity smart contracts.
-- `scripts/`: Deployment scripts for the contracts.
+- `scripts/`: Deployment scripts for the contracts (Currently set as the defaults when working in remix ide).
 - `test/`: Test cases for the contracts.
 
 ## Getting Started
