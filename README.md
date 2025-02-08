@@ -1,6 +1,8 @@
 
-# Congress DAO
+# CongressDAO
 
+![Solidity](https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white)
+<br>
 Proof of Concept US Congress DAO Simulation on The Ethereum Blockchain
 
 ## Overview
@@ -29,6 +31,7 @@ To get started with this project, follow these steps:
    ```bash
    git clone https://github.com/gavin-ho1/congress-dao.git
    cd congress-dao
+   ```
 
 2. **Install Dependencies**:
    Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed. Then, install the project dependencies:
@@ -42,13 +45,57 @@ To get started with this project, follow these steps:
    npx hardhat compile
    ```
 
-4. **Run Tests**:
+4. **Install Hardhat Gas Reporter (Optional)**:
+   If you want to monitor gas usage, install Hardhat Gas Reporter:
+   ```bash
+   npm install --save-dev hardhat-gas-reporter
+   ```
+   Then, enable it in `hardhat.config.js` by adding:
+   ```javascript
+   require("hardhat-gas-reporter");
+
+   module.exports = {
+     solidity: "0.8.28",
+     gasReporter: {
+       enabled: true,
+       token: "ETH",
+       currency: 'USD',
+       coinmarketcap: process.env.COINMARKETCAP_API_KEY, 
+       L2Etherscan: process.env.ETHERSCAN_API_KEY,
+       L1Etherscan: process.env.ETHERSCAN_API_KEY,
+     },
+   };
+   ```
+
+5. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add your API keys:
+   ```bash
+   touch .env
+   ```
+
+   Inside `.env`, add:
+   ```
+   COINMARKETCAP_API_KEY=your_coinmarketcap_api_key
+   ETHERSCAN_API_KEY=your_etherscan_api_key
+   ```
+
+   Then, install `dotenv` to load environment variables:
+   ```bash
+   npm install dotenv
+   ```
+
+   Update `hardhat.config.js` to include:
+   ```javascript
+   require("dotenv").config();
+   ```
+
+6. **Run Tests**:
    Execute the test cases to ensure everything is working correctly:
    ```bash
    npx hardhat test
    ```
 
-5. **Deploy Contracts**:
+7. **Deploy Contracts**:
    Deploy the contracts to a local network:
    ```bash
    npx hardhat node
@@ -63,11 +110,6 @@ After deploying the contracts, you can interact with them using the Hardhat cons
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes. Ensure that your code adheres to the existing style and includes relevant tests.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 
 *Note: This project is for educational and experimental purposes only and is not intended for production use.*
-```
