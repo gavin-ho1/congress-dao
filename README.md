@@ -9,11 +9,27 @@ Proof of Concept US Congress DAO Simulation on The Ethereum Blockchain
 
 This project is a proof of concept that simulates the United States Congress as a Decentralized Autonomous Organization (DAO) on the Ethereum blockchain. It aims to model the legislative process, allowing proposals to be submitted, voted on, and executed in a decentralized manner.
 
+## Why a DAO?
+
+CongressDAO aims to bring the traditional legislative process into the decentralized, transparent, and secure world of blockchain technology. Here’s how it enhances the current system:
+
+- **Decentralization**: Unlike the traditional system, where decision-making and proposal submissions are centralized, a DAO allows every member to participate directly. This removes the influence of powerful lobbyists and ensures that decisions reflect the collective will of the participants.
+
+- **Transparency**: In traditional Congress, the storage of bills and legislative actions can be opaque, with limited public access and complex procedures. With the CongressDAO, all proposals, votes, and decisions are recorded on the blockchain, ensuring full transparency and visibility to all participants and the public.
+
+- **Accessibility**: One of the major challenges in traditional government is the limited accessibility for the average citizen to directly participate in legislative processes. The CongressDAO opens up the legislative process, enabling anyone with an internet connection to propose, vote on, and track legislation, promoting greater citizen engagement.
+
+- **Security**: Storing bills and votes in centralized databases can be vulnerable to tampering and cyber attacks. With blockchain, each proposal, vote, and outcome is cryptographically secure and immutable, ensuring that the integrity of the process is preserved without reliance on a single point of failure.
+
+- **Reduction of Costs**: Traditional legislative processes often involve significant administrative overhead—paperwork, manual tracking, and physical meetings. The CongressDAO eliminates many of these costs by automating and digitizing the entire process, making it faster and more cost-efficient while reducing reliance on bureaucratic processes.
+
+
 ## Features
 
-- **Proposal Submission**: Members can submit proposals for consideration.
-- **Voting Mechanism**: Members can vote on proposals within a specified timeframe.
-- **Execution**: Approved proposals are executed automatically on the blockchain.
+- **Adding Members:** Simulated Congress members can be added (only available to the owner of the DAO) or nominated and the ratified by existing members.
+- **Proposal Submission**: Simulated Congress members can submit proposals for consideration.
+- **Voting Mechanism**: Simulated Congress members can vote on proposals within a specified timeframe.
+- **Execution**: Approved proposals are automatically recorded on the blockchain.
 
 ## Project Structure
 
