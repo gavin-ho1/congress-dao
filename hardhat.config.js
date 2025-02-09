@@ -13,4 +13,11 @@ module.exports = {
     L2Etherscan: process.env.ETHERSCAN_API_KEY,
     L1Etherscan: process.env.ETHERSCAN_API_KEY,
   },
+  settings: {
+    viaIR: true,
+    optimizer: {
+      enabled: true,
+      runs: 1000, // Ensure the optimizer is enabled alongside viaIR
+    },
+  },
 };
