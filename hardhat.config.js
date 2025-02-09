@@ -16,7 +16,7 @@ module.exports = {
   settings: {
     optimizer: {
       enabled: true,
-      runs: 200,      // Optimize for number of contract executions
+      runs: 1000,      // Optimize for number of contract executions
     },
     viaIR: true,      // Enable compilation via Yul IR
   },
