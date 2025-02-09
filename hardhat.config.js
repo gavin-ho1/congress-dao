@@ -14,10 +14,10 @@ module.exports = {
     L1Etherscan: process.env.ETHERSCAN_API_KEY,
   },
   settings: {
-    viaIR: true,
     optimizer: {
       enabled: true,
-      runs: 1000, // Ensure the optimizer is enabled alongside viaIR
+      runs: 200,      // Optimize for number of contract executions
     },
+    viaIR: true,      // Enable compilation via Yul IR
   },
 };
