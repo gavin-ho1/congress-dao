@@ -29,10 +29,8 @@ contract CongressDAO {
     error OnlyHouse();
     error AlreadyVoted();
     error OnlySenate();
-
-    // New custom error for nomination rejections (optional)
     error AlreadyNominated();
-
+    //Structs
     struct Member {
         string fName;
         string lName;
@@ -84,7 +82,6 @@ contract CongressDAO {
         string[] definitions;
     }
     
-    // New structure to hold nominations
     struct Nomination {
         address candidate;
         string fName;
@@ -335,11 +332,6 @@ contract CongressDAO {
         }
         return false;
     }
-    
-    // ============================================
-    // New Functions for Nomination & Ratification
-    // ============================================
-
     /**
      * @notice Allows an active member to nominate a candidate for membership.
      * For simplicity, only nominations for House or Senate seats are allowed.

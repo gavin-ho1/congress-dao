@@ -6,7 +6,7 @@ require("dotenv").config();
 module.exports = {
   solidity: "0.8.28",
   gasReporter: {
-    enabled: true,
+    enabled: process.env.ENABLED === 'true',
     token: "ETH",
     currency: 'USD',
     coinmarketcap: process.env.COINMARKETCAP_API_KEY, 
