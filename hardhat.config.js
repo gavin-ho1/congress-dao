@@ -21,7 +21,6 @@ module.exports = {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY, 
     L2Etherscan: process.env.ETHERSCAN_API_KEY,
     L1Etherscan: process.env.ETHERSCAN_API_KEY,
-    outputJSON: true,
   },
 };
 
