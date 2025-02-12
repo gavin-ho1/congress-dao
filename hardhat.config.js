@@ -4,7 +4,16 @@ require("dotenv").config();
 /** @type import('hardhat/config').HardhatUserConfig */
 
 module.exports = {
-  solidity: "0.8.28",
+  solidity: {
+    version: "0.8.28",
+    settings: {
+      optimizer: {
+        enabled: true, 
+        runs: 1000,
+      },
+      viaIR: true       
+    }
+  },
   gasReporter: {
     enabled: process.env.ENABLED === 'true',
     token: "ETH",
@@ -12,5 +21,7 @@ module.exports = {
     coinmarketcap: process.env.COINMARKETCAP_API_KEY, 
     L2Etherscan: process.env.ETHERSCAN_API_KEY,
     L1Etherscan: process.env.ETHERSCAN_API_KEY,
+    outputJSON: true,
   },
 };
+
