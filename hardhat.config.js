@@ -16,10 +16,6 @@ module.exports = {
   },
   gasReporter: {
     enabled: process.env.ENABLED === 'true',
-    reportPureAndViewMethods: false,
-    showUncalledMethods: false,
-    trackGasDeltas: true,
-    outputJSON: true,
     token: "ETH",
     currency: 'USD',
     coinmarketcap: process.env.COINMARKETCAP_API_KEY, 
